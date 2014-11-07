@@ -6,7 +6,7 @@
 
 <div id="ajax-container" class="clearfix">
   <ol class="loop-posts clearfix"><?php while (have_posts()) : the_post(); ?>    
-    <div class="col-md-3 loop-single">
+    <div class="col-md-3 loop-single item">
       <li id="post-<?php the_ID(); ?>">
          <article class="loop-articles">
               <h2><a class="js-ajax-link" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
