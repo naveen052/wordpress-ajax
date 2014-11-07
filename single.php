@@ -9,10 +9,10 @@
 
   if (have_posts()) : while (have_posts()) : the_post();
   ?>
-<div id="ajax-container" class="clearfix">
+<div id="ajax-container">
     <div class="postWrapper" id="post-<?php the_ID(); ?>">
 
-      <h1 class="postTitle"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+      <h1 class="postTitle"><a class="js-ajax-link" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
       <?php echo get_avatar( $comment, 32 ); ?>  
       <small><?php the_date(); ?> by <?php the_author(); ?></small>
 
