@@ -54,23 +54,6 @@ function naked_nav($post = 0)
 }
 
 /**
-* @desc make the site's heading & tagline an h1 on the homepage and an h4 on internal pages
-* Naked's default CSS should make the two different states look identical
-*/
-function do_heading()
-{
-  $output = "";
-
-  if(is_home()) $output .= "<h1>"; else  $output .= "<h4>";
-
-  $output .= "<a href='"  . get_bloginfo('url') . "'>" . get_bloginfo('name') . "</a> <span>" . get_bloginfo('description') . "</span>";
-
-  if(is_home()) $output .= "</h1>"; else  $output .= "</h4>";
-
-  return $output;
-}
-
-/**
 * register_sidebar()
 *
 *@desc Registers the markup to display in and around a widget

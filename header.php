@@ -28,11 +28,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <?php
-              // see this theme's functions.php
-              print do_heading();
-              print naked_nav($post);
-            ?>
+            <h1><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>      
           </div>
         </div>
       </div>
