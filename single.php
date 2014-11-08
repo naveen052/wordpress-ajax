@@ -1,39 +1,25 @@
-
-<?php
-
-  /**
-  *@desc A single blog post See page.php is for a page layout.
-  */
-
-  get_header();
-
-  if (have_posts()) : while (have_posts()) : the_post();
-  ?>
+<?php get_header(); if (have_posts()) : while (have_posts()) : the_post(); ?>
 <div id="ajax-container">
-    <div class="postWrapper" id="post-<?php the_ID(); ?>">
-
-      <h1 class="postTitle"><a class="js-ajax-link" href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-      <?php echo get_avatar( $comment, 32 ); ?>  
-      <small><?php the_date(); ?> by <?php the_author(); ?></small>
-
-      <div class="post"><?php the_content(__('(more...)')); ?></div>
-      <p class="postMeta">Category: <?php the_category(', ') . " " . the_tags(__('Tags: '), ', ', ' | ') . edit_post_link(__('Edit'), ''); ?></p>
-
-      <hr class="noCss" />
-
+  <div class="row">
+    <div class="col-md-8" id="post-<?php the_ID(); ?>">
+      <div class="single-post">
+        <h1><?php the_title(); ?></h1>
+        <p><?php echo get_avatar( '',16); ?>  Posted On : <?php the_date(); ?> by <?php the_author_posts_link(); ?></p>
+        <?php the_category(' | ') . " ". edit_post_link(__('Edit'), ' '); ?>
+        <p><?php the_content(__('(more...)')); ?></p>      
+        <hr class="noCss" />
+      </div>
     </div>
+    <div class="col-md-4">
+        <div class="sidebar">
+          something
+        </div>
+      </div>
+      <?php endwhile; else: ?>
+      <h2>Sorry, no posts matched your criteria.</h2>  
+    
+  </div>
 
-	<?php
-
-  comments_template();
-
-  endwhile; else: ?>
-
-		<p>Sorry, no posts matched your criteria.</p>
+    
+<?php endif; ?>
 </div>
-<?php
-  endif;
-
-  get_footer();
-
-?>

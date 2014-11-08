@@ -7,15 +7,8 @@
 	<title><?php if(is_home()) bloginfo('name'); else wp_title(''); ?></title>
   <link rel="stylesheet" href="http://localhost/wordpress/wp-content/themes/wordpress-ajax/assets/css/style.css" />
   <link rel="stylesheet" href="http://localhost/wordpress/wp-content/themes/wordpress-ajax/assets/css/nprogress.css" />
-	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
-	<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="<?php bloginfo('atom_url'); ?>" />
-   <!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,400italic' rel='stylesheet' type='text/css'>	-->
-   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-	<?php
-    wp_get_archives('type=monthly&format=link');
-    wp_head();
-  ?>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
   <script type="text/javascript" src="http://localhost/wordpress/wp-content/themes/wordpress-ajax/assets/js/nprogress.js"></script>
   <script type="text/javascript" src="http://localhost/wordpress/wp-content/themes/wordpress-ajax/assets/js/jquery.history.js"></script>
   <script type="text/javascript" src="http://localhost/wordpress/wp-content/themes/wordpress-ajax/assets/js/scripts.js"></script>
@@ -33,5 +26,4 @@
         </div>
       </div>
     </header>
-
     <div class="container">

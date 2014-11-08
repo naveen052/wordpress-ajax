@@ -75,23 +75,15 @@ if ( function_exists('register_sidebar') )
 */
 
 
-
-function get_excerpt(){
-$excerpt = get_the_content();
-$excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
-$excerpt = strip_shortcodes($excerpt);
-$excerpt = strip_tags($excerpt);
-$excerpt = substr($excerpt, 0, 300);
-$excerpt = substr($excerpt, 0, strripos($excerpt, " "));
-$excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
-$excerpt = $excerpt.'';
-return $excerpt;
+function custom_excerpt_length( $length ) {
+  return 25;
 }
+add_filter( 'excerpt_length', 'custom_excerpt_length', 25 );
+
 function new_excerpt_more( $more ) {
-  return ' <div class="pure-button"><br><a href="'. get_permalink( get_the_ID() ) . '">Read More</a></div>';
+  return '';
 }
-add_filter( 'excerpt_more', 'new_excerpt_more' );
-
+add_filter('excerpt_more', 'new_excerpt_more');
 
 add_theme_support( 'post-thumbnails' ); 
 
