@@ -3,16 +3,20 @@
   <div class="row">
     <div class="col-md-8" id="post-<?php the_ID(); ?>">
       <div class="single-post">
-        <h1><?php the_title(); ?></h1>
-        <p><?php echo get_avatar( '',16); ?>  Posted On : <?php the_date(); ?> by <?php the_author_posts_link(); ?></p>
-        <?php the_category(' | ') . " ". edit_post_link(__('Edit'), ' '); ?>
-        <p><?php the_content(__('(more...)')); ?></p>      
-        <hr class="noCss" />
+        <div class="meta-data">
+          <p><?php echo get_avatar('naveensingh.org@gmail.com',64); ?>  by <?php the_author_posts_link(); ?> On : <?php the_date(); ?> in <?php the_category(', ') ; ?> </p>
+          <p></p> 
+        </div>
+        <div class="inner-post">
+          <h1><?php the_title(); ?></h1>        
+          <p><?php the_content(__('(more...)')); ?></p>
+          <hr class="noCss" />
+          </div>
+        </div>
       </div>
-    </div>
     <div class="col-md-4">
         <div class="sidebar">
-          something
+          <?php get_sidebar(); ?>
         </div>
       </div>
       <?php endwhile; else: ?>

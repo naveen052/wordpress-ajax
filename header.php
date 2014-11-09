@@ -20,8 +20,22 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <h1><a href="<?php echo get_option('home'); ?>"><?php bloginfo('name'); ?></a></h1>      
+          <div class="col-md-5">
+            <nav class="right">
+            <a href="#">Something</a>
+            <a href="#">Something</a>
+            <a href="#">Something</a>  
+          </nav>
+          </div>
+          <div class="col-md-2 centered">
+            <a class="logo" href="<?php echo get_option('home'); ?>"><img src="http://localhost/wordpress/wp-content/uploads/2014/11/logo.png" alt="" /></a> 
+          </div>
+          <div class="col-md-5">
+            <nav class="left">              
+              <a href="#">Something</a>
+              <a href="#">Something</a>
+              <a href="#">Something</a>
+            </nav>     
           </div>
         </div>
       </div>

@@ -24,14 +24,10 @@
       </div>
       <?php endwhile; ?>
     </ol>
-    <?php else: ?>
-      <div class="col-md-12">
-        <h2><?php _e('Sorry, no posts matched your criteria.'); ?></h2>
-      </div>
-    <?php endif; ?>
   </div>
   <div class="row">
-      <div class="col-md-12">
+    <div class="paginate-div clearfix">
+      <div class="col-md-12 centered">
         <?php if (will_paginate()): ?>
          <p>
              <?php posts_nav_link('','','&laquo; Previous Entries') ?>
@@ -41,7 +37,13 @@
         <?php endif; ?>
       </div>
     </div>
+  </div>  
+  <?php else: ?>
+      <div class="col-md-12">
+        <h2><?php _e('Sorry, no posts matched your criteria.'); ?></h2>
+      </div>
+    <?php endif; ?>
 </div>
-  <?php
-  get_footer();
-?>
+</div>
+
+  <?php get_footer(); ?>
