@@ -4,7 +4,6 @@
   <script src="http://localhost/wordpress/wp-content/themes/wordpress-ajax/assets/js/jquery.js"></script>
 	<title><?php if(is_home()) bloginfo('name'); else wp_title(''); ?></title>
   <link rel="stylesheet" href="http://localhost/wordpress/wp-content/themes/wordpress-ajax/assets/css/style.css" />
-  <link rel="stylesheet" href="http://localhost/wordpress/wp-content/themes/wordpress-ajax/assets/css/nprogress.css" />
 	<link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
   <link href='http://fonts.googleapis.com/css?family=Roboto:500,400italic,300,400' rel='stylesheet' type='text/css'>
   <script type="text/javascript" src="http://localhost/wordpress/wp-content/themes/wordpress-ajax/assets/js/nprogress.js"></script>

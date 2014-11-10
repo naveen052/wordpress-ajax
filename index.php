@@ -1,9 +1,9 @@
 <?php  get_header(); if (have_posts()): ?>
 
 <div id="ajax-container">
-  <div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 10, "itemSelector": ".item" }'>
+  <div id="container" class="js-masonry" data-masonry-options='{ "columnWidth": 320,"gutter": 10, "itemSelector": ".item" }'>
     <ol class="row loop-posts clearfix"><?php while (have_posts()) : the_post(); ?>    
-      <div class="col-md-4 loop-single item">
+      <div class="col-md-3 loop-single item">
         <li id="post-<?php the_ID(); ?>">
            <article class="loop-articles">
               <div class="featured-image">
