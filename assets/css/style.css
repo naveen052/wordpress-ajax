@@ -414,6 +414,7 @@ footer a:hover {
   background-size: cover;
   background-position: center center;
   border-radius: 100%;
+  margin: 0px!important;
 }
 /*!
  * Bootstrap v3.3.0 (http://getbootstrap.com)
@@ -901,6 +902,7 @@ h6,
 }
 p {
   margin: 0 auto;
+  font-size: 1.14em;
 }
 .lead {
   margin-bottom: 20px;
