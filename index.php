@@ -28,19 +28,24 @@
   <div class="row">
     <div class="paginate-div clearfix">
       <div class="col-md-12 centered">
-        <?php if (will_paginate()): ?>
-         <p>
-             <?php posts_nav_link('','','&laquo; Previous Entries') ?>
-             <?php posts_nav_link('','Next Entries &raquo;','') ?>
-          </p>
-          
-        <?php endif; ?>
+        <?php next_posts_link( 'Older posts' ); ?>
+        <?php previous_posts_link( 'Newer posts' ); ?>
+
       </div>
     </div>
   </div>  
   <?php else: ?>
-      <div class="col-md-12">
-        <h2><?php _e('Sorry, no posts matched your criteria.'); ?></h2>
+      <div class="col-md-8">
+        <div class="single-post">
+          <div class="inner-post">
+            <h2><?php _e('Sorry, no posts matched your criteria.'); ?></h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="sidebar">
+          <?php get_sidebar(); ?>
+        </div>
       </div>
     <?php endif; ?>
 </div>

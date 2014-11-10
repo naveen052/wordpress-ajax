@@ -3,15 +3,24 @@
   <div class="row">
     <div class="col-md-8" id="post-<?php the_ID(); ?>">
       <div class="single-post">
-        <div class="meta-data">
-          <p><?php echo get_avatar('naveensingh.org@gmail.com',64); ?>  by <?php the_author_posts_link(); ?> On : <?php the_date(); ?> in <?php the_category(', ') ; ?> </p>
-          <p></p> 
-        </div>
         <div class="inner-post">
-          <h1><?php the_title(); ?></h1>        
-          <p><?php the_content(__('(more...)')); ?></p>
-          <hr class="noCss" />
+          <h1><?php the_title(); ?></h1>     
+          <div class="meta-data">
+            <small>On : <?php the_date(); ?> in <?php the_category(', ') ; ?></small>   
           </div>
+          <p><?php the_content(__('(more...)')); ?></p>
+          
+          <div class="post-footer">
+            <figure class="author-image">
+              <?php echo get_avatar('naveensingh.org@gmail.com'); ?>
+            </figure>
+              <h5>About <?php the_author(); ?></h5>
+              <section class="author-description">
+                <p><?php the_author_description(); ?> </p> 
+                <p>View All The Posts By <a href="<?php the_author_link(); ?> "><?php the_author(); ?></a></p>
+              </section>
+            </div>
+        </div>
         </div>
       </div>
     <div class="col-md-4">
@@ -27,3 +36,4 @@
     
 <?php endif; ?>
 </div>
+ <?php get_footer(); ?>

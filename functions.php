@@ -1,12 +1,12 @@
 <?php
 
 /**
-* Wordpress Naked, a very minimal wordpress theme designed to be used as a base for other themes.
+* WP Ajax, a very minimal wordpress theme designed to be used as a blogging theme.
 *
 * @licence LGPL
-* @author Darren Beale - http://siftware.co.uk - bealers@gmail.com - @bealers
+* @author Naveen Singh - http://naveensingh.net - contact@naveensingh.net - @official_naveen
 * 
-* Project URL http://code.google.com/p/wordpress-naked/
+* Project URL http://github.com/navee052
 */
 
 /**
@@ -103,6 +103,7 @@ function will_paginate()
   }
   return false;
 }
+
 
 function register_my_menus() {
   register_nav_menus(

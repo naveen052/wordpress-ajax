@@ -1,8 +1,8 @@
 /**
-  Theme Name: Naked
-  Theme URI: http://code.google.com/p/wordpress-naked/
-  Version: 1.2
-  Author: Siftware
+  Theme Name: WP-Ajax
+  Theme URI: http://github.com/naveen052/wordpress-ajax
+  Version: 1.0
+  Author: Naveen Singh
   Author URI: http://naveensingh.net/
   Tags: simple, clean, fixed width, widget-ready, widgets, right sidebar, two columns, valid XHTML, valid CSS, blank-slate
   Licence: LGPL
@@ -52,8 +52,9 @@ header h1 {
   box-shadow: 1px 1px 1px 1px #f7f7f7;
 }
 .meta-data {
-  background-color: #f3f3f3;
-  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0px;
+  margin-bottom: 20px;
 }
 .meta-data img {
   border-radius: 50%;
@@ -72,7 +73,7 @@ header h1 {
 }
 @media (min-width: 1370px) and (max-width: 3000px) {
   .loop-posts .col-md-4 {
-    width: 330px!important;
+    width: 310px!important;
   }
 }
 .loop-posts .col-md-4 {
@@ -123,6 +124,7 @@ header h1 {
 }
 .widget-title {
   border-bottom: 1px solid #ddd;
+  padding: 10px 0px;
 }
 /*--------------------*/
 nav {
@@ -162,13 +164,70 @@ footer a:hover {
   margin:50px auto;
 }
 .paginate-div a {
-  padding: 15px;
-  margin: 0px 15px;
+  padding: 5px 10px;
+  margin: 0px 5px;
   background-color: #fff;
   box-shadow: 1px 1px 1px 1px #f7f7f7;
 }
 .paginate-div a:hover {
   border-bottom: 0px;
+}
+.search-field {
+  width: 100%;
+  background-color: transparent;
+  border:0px;
+  outline: 0px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+::-webkit-input-placeholder {
+   color: #fff;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #fff;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;  
+}
+
+:-ms-input-placeholder {  
+   color: #fff;  
+}
+/********-------------------*******************/
+.post-footer {
+  position: relative;
+  margin: 6rem 0 0;
+  padding: 6rem 0 0;
+  border-top: #EBF2F6 1px solid;
+  }
+.author-image {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  margin-left: -40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  overflow: hidden;
+  background: #fff;
+  z-index: 2;
+  box-shadow: #E7EEF2 0 0 0 1px;
+  padding: 5px;
+}
+.author-image img {
+  position: relative;
+  display: block;
+  width: 100%!important;
+  height: 100%!important;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 100%;
 }
 /*!
  * Bootstrap v3.3.0 (http://getbootstrap.com)
