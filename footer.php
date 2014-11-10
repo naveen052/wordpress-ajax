@@ -1,8 +1,8 @@
   </div> </div>
       <footer>
         <div class="row">
-        	 <div class="col-md-4">
-			      <h3 class="widget-title">
+        	 <div class="col-md-4 footer-widgets">
+			      <h3>
 			     	<?php _e('Search This Site'); ?></h3>
 			      <form class="search-form" method="get" action="<?php bloginfo('home'); ?>">
 				   <input placeholder="Type and hit enter" type="text" class="search-field" name="s" id="s" size="15" /><br />
@@ -11,8 +11,8 @@
 
 			      </div>
 
-  			<div class="col-md-4">
-				 <h3 class="widget-title">Recent Posts</h3> 
+  			<div class="col-md-4 footer-widgets">
+				 <h3>Recent Posts</h3> 
 				<?php
 					$args = array( 'numberposts' => '5', 'tax_query' => array(
 							array(
@@ -35,8 +35,8 @@
 				?>
 			</div>
 
-		  		<div class="col-md-4">
-					<h3 class="widget-title">Popular Categories</h3> 
+		  		<div class="col-md-4 footer-widgets">
+					<h3>Popular Categories</h3> 
 					<?php
 					$args = array(
 					  'orderby' => 'name',
